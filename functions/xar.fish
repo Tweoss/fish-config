@@ -1,6 +1,8 @@
 function xar -d "xar <parent directory> <cmd> <args>; Execute a command in all directories given the root"
     set start_dir (pwd)
-    if [ test (count $argv) = 1 || test (count $argv) = 0 ]
+    set num (count $argv)
+    echo $num
+    if [ $num -eq 1 -o $num -eq 0 ]
 	echo "Provide a directory and a command to execute"
 	return 1
     end
